@@ -5,6 +5,7 @@
 
 # Terraform
 .terraform
+*tfstate*
 
 # User-specific files
 *.suo
