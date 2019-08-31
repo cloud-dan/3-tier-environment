@@ -14,6 +14,7 @@ variable "client_secret" {
 }
 variable "location" {
   description = "The region the resource will be deployed to"
+  default = "West Europe"
 }
 # resource_group specific variables
 variable "company" {
@@ -27,4 +28,8 @@ variable "product" {
 variable "environment" {
   description = "The 3 letter environment acronym"
   default = "DEV"
+}
+variable "region_code" {
+  description = "The 3 letter region acronym e.g EUW for West Europe"
+  default = "EUW"
 }
