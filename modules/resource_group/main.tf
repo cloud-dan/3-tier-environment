@@ -3,6 +3,10 @@ resource "azurerm_resource_group" "this" {
   location = var.location
 
   tags = {
-    environment = "Production"
+    product     = var.product
+    environment = var.environment
+    instance    = var.instance
+    region_code = var.region_code
+    cost_code   = "abc123"
   }
 }
