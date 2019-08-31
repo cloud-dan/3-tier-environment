@@ -33,3 +33,7 @@ variable "region_code" {
   description = "The 3 letter region acronym e.g EUW for West Europe"
   default = "EUW"
 }
+variable "instance" {
+  description = "The instance number of the environment"
+  default = "01"
+}
