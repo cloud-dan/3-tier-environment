@@ -1,7 +1,7 @@
 # default variables
 variable "cloud_environment" {
   description = "The cloud environment which should be used"
-  default = "public"
+  default     = "public"
 }
 variable "tenant_id" {
   description = "The tenant ID"
@@ -14,26 +14,26 @@ variable "client_secret" {
 }
 variable "location" {
   description = "The region the resource will be deployed to"
-  default = "West Europe"
+  default     = "West Europe"
 }
 # resource_group specific variables
 variable "company" {
   description = "The 3 letter company acronym e.g. CON for Contoso"
-  default = "CSO"
+  default     = "CSO"
 }
 variable "product" {
   description = "The 3 letter product acronym e.g. FAB for Fabrikam Fiber"
-  default = "FAB"
+  default     = "FAB"
 }
 variable "environment" {
   description = "The 3 letter environment acronym"
-  default = "DEV"
+  default     = "DEV"
 }
 variable "region_code" {
   description = "The 3 letter region acronym e.g EUW for West Europe"
-  default = "EUW"
+  default     = "EUW"
 }
 variable "instance" {
   description = "The instance number of the environment"
-  default = "01"
+  default     = "01"
 }
