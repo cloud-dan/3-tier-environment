@@ -1,4 +1,4 @@
-# variables
+# default variables
 variable "cloud_environment" {
   description = "The cloud environment which should be used"
   default = "public"
@@ -14,4 +14,17 @@ variable "client_secret" {
 }
 variable "location" {
   description = "The region the resource will be deployed to"
+}
+# resource_group specific variables
+variable "company" {
+  description = "The 3 letter company acronym e.g. CON for Contoso"
+  default = "CSO"
+}
+variable "product" {
+  description = "The 3 letter product acronym e.g. FAB for Fabrikam Fiber"
+  default = "FAB"
+}
+variable "environment" {
+  description = "The 3 letter environment acronym"
+  default = "DEV"
 }
