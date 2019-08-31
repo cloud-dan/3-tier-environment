@@ -1,5 +1,5 @@
 # variables
-variable "environment" {
+variable "cloud_environment" {
   description = "The cloud environment which should be used"
   default = "public"
 }

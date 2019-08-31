@@ -1,5 +1,5 @@
 # variables
-variable "environment" {
+variable "cloud_environment" {
   description = "The cloud environment which should be used"
   default = "public"
 }
@@ -11,4 +11,7 @@ variable "client_id" {
 }
 variable "client_secret" {
   description = "The service principal client secret"
+}
+variable "location" {
+  description = "The region the resource will be deployed to"
 }
