@@ -12,3 +12,24 @@ variable "client_id" {
 variable "client_secret" {
   description = "The service principal client secret"
 }
+# network specific variables
+variable "company" {
+  description = "The 3 letter company acronym e.g. CON for Contoso"
+  default     = "CSO"
+}
+variable "product" {
+  description = "The 3 letter product acronym e.g. FAB for Fabrikam Fiber"
+  default     = "FAB"
+}
+variable "environment" {
+  description = "The 3 letter environment acronym"
+  default     = "DEV"
+}
+variable "region_code" {
+  description = "The 3 letter region acronym e.g EUW for West Europe"
+  default     = "EUW"
+}
+variable "instance" {
+  description = "The instance number of the environment"
+  default     = "01"
+}
