@@ -8,10 +8,10 @@ data "azurerm_virtual_network" "this" {
 }
 
 resource "azurerm_subnet" "this" {
-  for_each = toset(var.subnet_names)
+  for_each = var.subnet_names
 
   name                 = format("%s%s", each.key, "Subnet")
   resource_group_name  = data.azurerm_resource_group.this.name
   virtual_network_name = data.azurerm_virtual_network.this.name
-  address_prefix       = cidrsubnet("10.0.0.0/16", 8, 1) #format("%s.%s.%s.%s%s", 10, 0, each.value , 0, "/24")
+  address_prefix       = cidrsubnet("10.0.0.0/16", 8, each.value ) #format("%s.%s.%s.%s%s", 10, 0, each.value , 0, "/24")
 }

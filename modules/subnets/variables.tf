@@ -1,7 +1,7 @@
 # variables
 variable "cloud_environment" {
   description = "The cloud environment which should be used"
-  default = "public"
+  default     = "public"
 }
 variable "tenant_id" {
   description = "The tenant ID"
@@ -37,11 +37,11 @@ variable "instance" {
   default     = "01"
 }
 variable "subnet_names" {
-    description = "This is a list of subnets that will be deployed"
-    default = [
-        "Gateway",
-        "Web",
-        "App",
-        "Data"
-    ]
+  description = "This is a list of subnets that will be deployed"
+  default = {
+    "Gateway" = 1
+    "Web"     = 2
+    "App"     = 3
+    "Data"    = 4
+  }
 }
