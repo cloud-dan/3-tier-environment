@@ -45,3 +45,7 @@ variable "route_tables" {
     "Data"
   ]
 }
+variable "next_hop" {
+  description = "This is the next hop address in the route table"
+  default = "10.0.1.1"
+}
