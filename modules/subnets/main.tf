@@ -8,8 +8,11 @@ data "azurerm_virtual_network" "this" {
 }
 
 resource "azurerm_subnet" "this" {
-  name                 = "app-subnet"
+  for_each = toset(var.subnet_names)
+
+  name                 = each.value
   resource_group_name  = data.azurerm_resource_group.this.name
   virtual_network_name = data.azurerm_virtual_network.this.name
   address_prefix       = "10.0.1.0/24"
+
 }
