@@ -30,3 +30,9 @@ data "azurerm_subnet" "data" {
   virtual_network_name = format("%s%s", data.azurerm_resource_group.this.name, "VNT")
   resource_group_name  = data.azurerm_resource_group.this.name
 }
+
+resource "azurerm_route_table" "this" {
+  name                = lower(format("%s-%s-%s", data.azurerm_resource_group.infrastructure_rg.name, "RTE", element(var.route_table_name, count.index)))
+  location            = azurerm_resource_group.this.location
+  resource_group_name = azurerm_resource_group.this.name
+}
