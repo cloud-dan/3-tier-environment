@@ -3,7 +3,7 @@ data "azurerm_resource_group" "this" {
 }
 
 data "azurerm_virtual_network" "this" {
-  name                = format("%s-%s-%s-%s-%s-%s", var.company, var.product, var.environment, var.instance, var.region_code, "vnt")
+  name                = lower(format("%s-%s-%s-%s-%s-%s", var.company, var.product, var.environment, var.instance, var.region_code, "vnt"))
   resource_group_name = data.azurerm_resource_group.this.name
 }
 
