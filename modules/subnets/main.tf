@@ -13,5 +13,5 @@ resource "azurerm_subnet" "this" {
   name                 = format("%s%s", each.key, "Subnet")
   resource_group_name  = data.azurerm_resource_group.this.name
   virtual_network_name = data.azurerm_virtual_network.this.name
-  address_prefix       = cidrsubnet("10.0.0.0/16", 8, each.value ) #format("%s.%s.%s.%s%s", 10, 0, each.value , 0, "/24")
+  address_prefix       = cidrsubnet("10.0.0.0/16", 8, each.value )
 }
