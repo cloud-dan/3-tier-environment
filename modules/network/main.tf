@@ -3,10 +3,10 @@ data "azurerm_resource_group" "this" {
 }
 
 resource "azurerm_virtual_network" "this" {
-  name                   = ToLower(format("%s-%s-%s-%s-%s-%s", var.company, var.product, var.environment, var.instance, var.region_code, "VNT"))
-  location               = data.azurerm_resource_group.this.location
-  azurerm_resource_group = data.azurerm_resource_group.this.name
-  address_space          = ["10.0.0.0/16"]
+  name                = Lower(format("%s-%s-%s-%s-%s-%s", var.company, var.product, var.environment, var.instance, var.region_code, "VNT"))
+  location            = data.azurerm_resource_group.this.location
+  resource_group_name = data.azurerm_resource_group.this.name
+  address_space       = ["10.0.0.0/16"]
 
   tags = {
     product     = var.product
