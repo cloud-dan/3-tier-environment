@@ -34,7 +34,8 @@ data "azurerm_subnet" "data" {
 resource "azurerm_route_table" "this" {
   for_each = toset(var.route_tables)
 
-  name                = lower(format("%s-%s-%s", data.azurerm_resource_group.this.name, "RTE", each.key))
-  location            = data.azurerm_resource_group.this.location
-  resource_group_name = data.azurerm_resource_group.this.name
+  name                          = lower(format("%s-%s-%s", data.azurerm_resource_group.this.name, "RTE", each.key))
+  location                      = data.azurerm_resource_group.this.location
+  resource_group_name           = data.azurerm_resource_group.this.name
+  disable_bgp_route_propagation = false
 }
