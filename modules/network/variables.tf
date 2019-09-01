@@ -6,6 +6,9 @@ variable "cloud_environment" {
 variable "tenant_id" {
   description = "The tenant ID"
 }
+variable "subscription_id" {
+  description = "The subscription ID"
+}
 variable "client_id" {
   description = "The service principal client ID"
 }
