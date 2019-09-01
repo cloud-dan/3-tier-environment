@@ -1,7 +1,7 @@
 # variables
 variable "cloud_environment" {
   description = "The cloud environment which should be used"
-  default = "public"
+  default     = "public"
 }
 variable "tenant_id" {
   description = "The tenant ID"
@@ -37,7 +37,7 @@ variable "instance" {
 }
 variable "route_tables" {
   description = "This is a list of route tables that will be deployed"
-  type = list(string)
+  type        = list(string)
   default = [
     "Gateway",
     "Web",
@@ -47,5 +47,5 @@ variable "route_tables" {
 }
 variable "next_hop" {
   description = "This is the next hop address in the route table"
-  default = "10.0.1.1"
+  default     = "10.0.1.1"
 }

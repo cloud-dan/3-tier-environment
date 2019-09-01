@@ -40,7 +40,7 @@ resource "azurerm_route_table" "this" {
   disable_bgp_route_propagation = false
 }
 
-resource "azurerm_route" "Default" {
+resource "azurerm_route" "default" {
   for_each = toset(var.route_tables)
 
   name                   = "Default"
