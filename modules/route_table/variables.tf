@@ -37,10 +37,11 @@ variable "instance" {
 }
 variable "route_tables" {
   description = "This is a list of route tables that will be deployed"
-  default = {
+  type = list(string)
+  default = [
     "Gateway",
     "Web",
     "App",
     "Data"
-  }
+  ]
 }

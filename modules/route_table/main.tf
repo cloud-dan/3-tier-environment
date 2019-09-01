@@ -34,7 +34,7 @@ data "azurerm_subnet" "data" {
 resource "azurerm_route_table" "this" {
   for_each            = var.route_tables
 
-  name                = lower(format("%s-%s-%s", data.azurerm_resource_group.infrastructure_rg.name, "RTE", each.key)
+  name                = lower(format("%s-%s-%s", data.azurerm_resource_group.this.name, "RTE", each.key))
   location            = data.azurerm_resource_group.this.location
   resource_group_name = data.azurerm_resource_group.this.name
 }
