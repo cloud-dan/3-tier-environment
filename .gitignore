@@ -6,6 +6,7 @@
 # Terraform
 .terraform
 *tfstate*
+Set-TFVars.ps1
 
 # User-specific files
 *.suo
