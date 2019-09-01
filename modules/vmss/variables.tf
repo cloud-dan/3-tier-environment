@@ -1,7 +1,7 @@
 # variables
 variable "cloud_environment" {
   description = "The cloud environment which should be used"
-  default = "public"
+  default     = "public"
 }
 variable "tenant_id" {
   description = "The tenant ID"
@@ -35,4 +35,23 @@ variable "region_code" {
 variable "instance" {
   description = "The instance number of the environment"
   default     = "01"
+}
+variable "vm_role" {
+  description = "The three letter acronym for the VM role"
+  default     = "SQL"
+}
+variable "vm_count" {
+  description = "How many VM's should be deployed"
+  default     = 2
+}
+variable "vm_subnet" {
+  description = "The subnet to deploy the VM to"
+  default     = "App"
+}
+variable "vm_local_admin" {
+  description = "The local admin account"
+  default     = "LocalAdmin"
+}
+variable "vm_local_password" {
+  description = "The local admin account password"
 }
