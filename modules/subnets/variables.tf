@@ -36,3 +36,12 @@ variable "instance" {
   description = "The instance number of the environment"
   default     = "01"
 }
+variable "subnet_names" {
+    description = "This is a list of subnets that will be deployed"
+    default = {
+        "Gateway",
+        "Web",
+        "App",
+        "Data"
+    }
+}
