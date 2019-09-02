@@ -3,7 +3,7 @@ module "resource_group" {
 
   company     = "CSO"
   product     = "FAB"
-  environment = "PRD"
+  environment = "DEV"
   instance    = "01"
   region_code = "EUW"
 
@@ -18,7 +18,7 @@ module "network" {
 
   company     = "CSO"
   product     = "FAB"
-  environment = "PRD"
+  environment = "DEV"
   instance    = "01"
   region_code = "EUW"
 
@@ -33,7 +33,7 @@ module "subnets" {
 
   company     = "CSO"
   product     = "FAB"
-  environment = "PRD"
+  environment = "DEV"
   instance    = "01"
   region_code = "EUW"
 
@@ -48,11 +48,11 @@ module "web_vm" {
 
   company     = "CSO"
   product     = "FAB"
-  environment = "PRD"
+  environment = "DEV"
   instance    = "01"
   region_code = "EUW"
   vm_role     = "WEB"
-  vm_count    = 2
+  vm_count    = 1
   vm_subnet   = "Web"
 
   client_id       = var.client_id
